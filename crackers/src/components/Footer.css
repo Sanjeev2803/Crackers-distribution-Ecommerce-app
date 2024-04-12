@@ -1,0 +1,36 @@
+.footer-section {
+    background-color: #f8f9fa;
+    padding: 50px 0;
+  }
+  
+  .footer-section h4 {
+    color: #333;
+  }
+  
+  .footer-section p {
+    color: #555;
+  }
+  
+  .footer-section .icon {
+    margin-top: 20px;
+  }
+  
+  .footer-section .icon svg {
+    margin-right: 10px;
+    color: #333;
+  }
+  
+  .footer-section .follow {
+    margin-top: 20px;
+  }
+  
+  .footer-section .follow h4 {
+    color: #333;
+  }
+  
+  .footer-section .copyright {
+    margin-top: 30px;
+    color: #777;
+    font-size: 14px;
+  }
+  

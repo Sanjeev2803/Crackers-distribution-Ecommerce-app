@@ -1,0 +1,76 @@
+
+/*.carousel {
+  width: 100%;
+}
+
+.main{
+  color:yellow
+}
+  @media screen and (min-width: 768px) {
+    .navbar-brand {
+      margin-right: 0;
+      padding: 0 3rem;
+    }
+    .hero div {
+      width: 50%;
+    }
+    .about-us {
+      width: 50%;
+    }
+    .contact {
+      max-width: 50%;
+    }
+  }
+  /* .col-sm-4 {
+    position: relative;
+    overflow: hidden;
+  } */
+
+ /* .col-sm-4 img {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* mix-blend-mode:multiply;  */
+    /* background-color: white; */
+  /*
+  .price {
+    display: block;
+    text-decoration: line-through; /* Strikethrough */
+     /* Strikethrough color, adjust as needed */
+  
+
+  /* .new-price {
+    font-weight: bold; */
+    /* color: green; New price color, adjust as needed
+  } */
+  /* .col-sm-4 h3,
+  .col-sm-4 p {
+    text-align: center;
+  } */
+
+  /* @media screen and (min-width: 1200px) {
+    
+    .carousel {
+      max-width: 100%;
+    }
+  } */
+  .price-container {
+    position: relative; 
+   /* Make the container relative to position its children */
+  }
+
+  .price-user {
+    color:red; /* Default color for old price */
+    text-decoration: line-through; /* Strikethrough for old price */
+    position: absolute; /* Position old price absolutely */
+    top: 5px;
+    font-size: 1em; /* Position at the top of the container */
+  }
+
+  .new-price-user {
+    color: green; /* Color for new price */
+    position: absolute; /* Position new price absolutely */
+    bottom: 1px; 
+    font-size: 1.2em;
+    padding: 1px;/* Position at the top of the container */
+  }

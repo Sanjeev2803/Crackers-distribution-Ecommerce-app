@@ -1,0 +1,102 @@
+/* AdminDashboard.css */
+
+/* General Styles */
+.grey-bg {
+    background-color: #f2f2f2;
+  }
+  
+  .display-5 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Card Styles */
+  .card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  @keyframes scaleAndFade {
+    0% {
+      transform: scale(1);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1.05);
+      opacity: 1;
+    }
+  }
+  
+  .card:hover {
+    animation: scaleAndFade 0.3s ease-in-out;
+  }
+  
+  .card img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-content {
+    padding: 15px;
+  }
+  
+  .card-body {
+    text-align: center;
+  }
+  
+  .media {
+    padding: 10px;
+  }
+  
+  .media-body {
+    margin-left: 15px;
+  }
+  
+  span {
+    display: block;
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  /* Additional Styles */
+  /* Customize these styles or add your own as needed */
+  
+  /* Welcome Message */
+  .display-5 {
+    margin-top: 20px;
+  }
+  
+  /* Stats Section */
+  #minimal-statistics,
+  #stats-subtitle {
+    margin-top: 30px;
+  }
+  
+  /* Title for Statistics */
+  .text-uppercase {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+  
+  /* Stats Cards */
+  .card img {
+    border-radius: 10px 10px 0 0;
+  }
+  
+  /* Total Products and Total Posts Cards */
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  
+  /* Footer Section */
+  #footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
