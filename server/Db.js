@@ -1,4 +1,6 @@
 const mongoose=require('mongoose')
+
+const env=require('dotenv').config()
 const generateUserId = () => mongoose.Types.ObjectId().toString();
 const userSchema=new mongoose.Schema({
     userId: {
@@ -68,7 +70,7 @@ const Seller=mongoose.model('seller',sellerSchema)
 const Admin=mongoose.model('admin',adminSchema)
 const password = encodeURIComponent('Sanjeev@123');
 // Brr8alDQV1NTjlF6
-mongoose.connect('mongodb://Sanjeev:Brr8alDQV1NTjlF6@ac-ayhzlfz-shard-00-00.jtxl9is.mongodb.net:27017,ac-ayhzlfz-shard-00-01.jtxl9is.mongodb.net:27017,ac-ayhzlfz-shard-00-02.jtxl9is.mongodb.net:27017/crackers?ssl=true&replicaSet=atlas-10su63-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0').then(()=>console.log('db connected')).catch(e=>console.log('error occured',e))
+mongoose.connect(`mongodb://Sanjeev:${process.env.MONGODB_PASS}@ac-ayhzlfz-shard-00-00.jtxl9is.mongodb.net:27017,ac-ayhzlfz-shard-00-01.jtxl9is.mongodb.net:27017,ac-ayhzlfz-shard-00-02.jtxl9is.mongodb.net:27017/crackers?ssl=true&replicaSet=atlas-10su63-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0`).then(()=>console.log('db connected')).catch(e=>console.log('error occured',e))
 module.exports={User,Seller,Admin}
 
 
