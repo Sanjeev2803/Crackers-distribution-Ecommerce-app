@@ -1,0 +1,429 @@
+{ "Products" : [
+  {
+    "id": 1,
+    "name": "Mega Blast Atom Bomb",
+    "category": "atom bomb cracker",
+    "image": "atom_bomb_img1",
+    "price": 5.99
+  },
+  {
+    "id": 2,
+    "name": "Nuclear Thunder Flash",
+    "category": "atom bomb cracker",
+    "image": "https://www.bigbasket.com/media/uploads/p/l/40116443_1-standard-crackers-atom-bombs-thunder-bomb-green.jpg",
+    "price": 7.99
+  },
+  {
+    "id": 3,
+    "name": "Atomic Whirlwind Boom",
+    "category": "atom bomb cracker",
+    "image": "https://5.imimg.com/data5/SELLER/Default/2022/9/KF/QN/SU/144898276/atoms-boom-crackers.jpg",
+    "price": 8.99
+  },
+  {
+    "id": 4,
+    "name": "Explosive Mushroom Cloud",
+    "category": "atom bomb cracker",
+    "image": "https://5.imimg.com/data5/SELLER/Default/2021/9/CK/GR/FT/6398711/17258f59-0404-41ce-a4b9-afe325468046-500x500.jpg",
+    "price": 6.99
+  },
+  {
+    "id": 5,
+    "name": "Radiant Sky Burst",
+    "category": "atom bomb cracker",
+    "image": "https://www.arm.sriragavendramatrimony.com/wp-content/uploads/2021/08/Classic-bomb-1-300x300.jpg",
+    "price": 9.99
+  },
+  {
+    "id": 6,
+    "name": "Inferno Impact Atomizer",
+    "category": "atom bomb cracker",
+    "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_043.jpg",
+    "price": 11.99
+  },
+  {
+    "id": 7,
+    "name": "Neutron Nova Explosion",
+    "category": "atom bomb cracker",
+    "image": "https://5.imimg.com/data5/SELLER/Default/2023/8/337498921/PA/XV/IX/30090017/whatsapp-image-2023-08-24-at-12-22-08-pm.jpeg",
+    "price": 10.99
+  },
+  {
+    "id": 8,
+    "name": "Fission Fireball Fury",
+    "category": "atom bomb cracker",
+    "image": "https://rathinamcrackers.com/thysucky/2021/08/DSC_3129-scaled.jpg",
+    "price": 13.99
+  },
+  {
+    "id": 9,
+    "name": "Chain Reaction Cataclysm",
+    "category": "atom bomb cracker",
+    "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+    "price": 12.99
+  },
+  {
+    "id": 10,
+    "name": "Plasma Burst Blitz",
+    "category": "atom bomb cracker",
+    "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+    "price": 14.99
+  },
+
+  
+    {
+      "id": 11,
+      "name": "Deluxe Gold Rush Crackers",
+      "category": "Deluxe Crackers",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 15.99
+    },
+    {
+      "id": 12,
+      "name": "Deluxe Festive Fiesta Crackers",
+      "category": "Deluxe Crackers",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 12.49
+    },
+    {
+      "id": 13,
+      "name": "Deluxe Sparkling Symphony Crackers",
+      "category": "Deluxe Crackers",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 18.75
+    },
+    {
+      "id": 14,
+      "name": "Deluxe Celestial Explosion Crackers",
+      "category": "Deluxe Crackers",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 22.99
+    },
+    {
+      "id": 15,
+      "name": "Deluxe Glitter Gala Crackers",
+      "category": "Deluxe Crackers",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 14.95
+    },
+    {
+      "id": 16,
+      "name": "Deluxe Midnight Magic Crackers",
+      "category": "Deluxe Crackers",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 20.25
+    },
+    {
+      "id": 17,
+      "name": "Deluxe Radiant Rain Crackers",
+      "category": "Deluxe Crackers",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 17.50
+    },
+    {
+      "id": 18,
+      "name": "Deluxe Aurora Borealis Crackers",
+      "category": "Deluxe Crackers",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 25.99
+    },
+    {
+      "id": 19,
+      "name": "Deluxe Mystical Mirage Crackers",
+      "category": "Deluxe Crackers",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 19.95
+    },
+    {
+      "id": 20,
+      "name": "Deluxe Galactic Glitter Crackers",
+      "category": "Deluxe Crackers",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 16.75
+    },
+    {
+      "id": 21,
+      "name": "Golden Glitter Spiral Fancy Chakkar",
+      "category": "Fancy Chakkars",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 15.99
+    },
+    {
+      "id": 22,
+      "name": "Colorful Starburst Fancy Chakkar",
+      "category": "Fancy Chakkars",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 12.49
+    },
+    {
+      "id": 23,
+      "name": "Silver Swirl Fancy Chakkar",
+      "category": "Fancy Chakkars",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 18.75
+    },
+    {
+      "id": 24,
+      "name": "Vibrant Peacock Feather Chakkar",
+      "category": "Fancy Chakkars",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 21.99
+    },
+    {
+      "id": 25,
+      "name": "Radiant Sunflower Fancy Chakkar",
+      "category": "Fancy Chakkars",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 14.95
+    },
+    {
+      "id": 26,
+      "name": "Twinkling Firework Fancy Chakkar",
+      "category": "Fancy Chakkars",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 23.50
+    },
+    {
+      "id": 27,
+      "name": "Glowing Moon Fancy Chakkar",
+      "category": "Fancy Chakkars",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 19.99
+    },
+    {
+      "id": 28,
+      "name": "Sapphire Sparkle Fancy Chakkar",
+      "category": "Fancy Chakkars",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 16.25
+    },
+    {
+      "id": 29,
+      "name": "Ruby Red Circular Chakkar",
+      "category": "Fancy Chakkars",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 20.50
+    },
+    {
+      "id": 30,
+      "name": "Diamond Dazzle Fancy Chakkar",
+      "category": "Fancy Chakkars",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 25.99
+    },
+    {
+      "id": 31,
+      "name": "Sparkling Gold Celebration Crackers",
+      "category": "Fancy Fountains",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 19.99
+    },
+    {
+      "id": 32,
+      "name": "Velvet Elegance Festive Crackers",
+      "category": "Fancy Fountains",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 24.99
+    },
+    {
+      "id": 33,
+      "name": "Royal Ruby Red Surprise Crackers",
+      "category": "Fancy Fountains",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 21.99
+    },
+    {
+      "id": 34,
+      "name": "Emerald Enchantment Party Crackers",
+      "category": "Fancy Fountains",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 26.99
+    },
+    {
+      "id": 35,
+      "name": "Sapphire Splendor Celebration Crackers",
+      "category": "Fancy Fountains",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 22.99
+    },
+    {
+      "id": 36,
+      "name": "Opulent Orchid Delight Crackers",
+      "category": "Fancy Fountains",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 28.99
+    },
+    {
+      "id": 37,
+      "name": "Golden Gourmet Surprise Crackers",
+      "category": "Fancy Fountains",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 31.99
+    },
+    {
+      "id": 38,
+      "name": "Golden Glittering Sparklers Box",
+      "category": "Fancy Single Shots - Crackers",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 12.99
+    },
+    {
+      "id": 39,
+      "name": "Colorful Confetti Burst Poppers",
+      "category": "Fancy Single Shots - Crackers",
+      "image": "https://bijili.s3.ap-south-1.amazonaws.com/product/bij_044.jpg",
+      "price": 8.75
+    },
+    {
+      "id": 40,
+      "name": "Shimmering Silver Streamer Cones",
+      "category": "Fancy Single Shots - Crackers",
+      "image": "p40_img",
+      "price": 14.50
+    },
+    {
+      "id": 41,
+      "name": "Fancy Floral Patterned Popcorn Crackers",
+      "category": "Fancy Single Shots - Crackers",
+      "image": "p41_img",
+      "price": 9.95
+    },
+    {
+      "id": 42,
+      "name": "Glowing Star-Shaped Twinklers Set",
+      "category": "Fancy Single Shots - Crackers",
+      "image": "p42_img",
+      "price": 18.99
+    },
+    {
+      "id": 43,
+      "name": "Dazzling Diamond Sparkle Fountain",
+      "category": "Fancy Single Shots - Crackers",
+      "image": "p43_img",
+      "price": 22.50
+    },
+    {
+      "id": 44,
+      "name": "Fancy Peacock Feather Crackling Cones",
+      "category": "Fancy Single Shots - Crackers",
+      "image": "p44_img",
+      "price": 16.25
+    },
+    {
+      "id": 45,
+      "name": "Flower Pots Deluxe Assortment",
+      "category": "Flower Pots Crackers",
+      "image": "flower_pots_deluxe.jpg",
+      "price": 15.99
+
+    },
+    {
+      "id": 46,
+      "name": "Colorful Blossom Sparklers",
+      "category": "Flower Pots Crackers",
+      "image": "blossom_sparklers.jpg",
+      "price": 8.5
+    },
+    {
+      "id": 47,
+      "name": "Golden Petal Fountain",
+      "category": "Flower Pots Crackers",
+      "image": "golden_petal_fountain.jpg",
+      "price": 12.75
+    },
+    {
+      "id": 48,
+      "name": "Twilight Bloom Rockets",
+      "category": "Flower Pots Crackers",
+      "image": "twilight_bloom_rockets.jpg",
+      "price": 19.99
+    },
+    {
+      "id": 49,
+      "name": "Dazzling Daisy Crackling Balls",
+      "category": "Flower Pots Crackers",
+      "image": "dazzling_daisy_crackling_balls.jpg",
+      "price": 7.25
+    },
+    {
+      "id": 50,
+      "name": "Floral Fantasy Aerial Shells",
+      "category": "Flower Pots Crackers",
+      "image": "floral_fantasy_aerial_shells.jpg",
+      "price": 23.5
+    },
+    {
+      "id": 51,
+      "name": "Supersonic Skyburst",
+      "category": "Rockets crackers",
+      "image": "supersonic_skyburst_img.jpg",
+      "price": 9.99
+  },
+  {
+      "id": 52,
+      "name": "Galactic Glitter Burst",
+      "category": "Rockets crackers",
+      "image": "galactic_glitter_burst_img.jpg",
+      "price": 12.5
+  },
+  {
+      "id": 53,
+      "name": "Starlight Streaker",
+      "category": "Rockets crackers",
+      "image": "starlight_streaker_img.jpg",
+      "price": 8.75
+  },
+  {
+      "id": 54,
+      "name": "Meteor Shower Eruption",
+      "category": "Rockets crackers",
+      "image": "meteor_shower_eruption_img.jpg",
+      "price": 15.0
+  },
+  {
+      "id": 55,
+      "name": "Nebula Nova Blast",
+      "category": "Rockets crackers",
+      "image": "nebula_nova_blast_img.jpg",
+      "price": 11.25
+  },
+
+  {
+    "id": 56,
+    "name": "Golden Glitter Sparklers",
+    "category": "Sparklers crackers",
+    "image": "img56",
+    "price": 4.99
+  },
+  {
+    "id": 57,
+    "name": "Festive Fireworks Sparklers",
+    "category": "Sparklers crackers",
+    "image": "img57",
+    "price": 6.99
+  },
+  {
+    "id": 58,
+    "name": "Crimson Celebration Sparklers",
+    "category": "Sparklers crackers",
+    "image": "img58",
+    "price": 5.49
+  },
+  {
+    "id": 59,
+    "name": "Starlight Symphony Sparklers",
+    "category": "Sparklers crackers",
+    "image": "img59",
+    "price": 7.99
+  },
+  {
+    "id": 60,
+    "name": "Midnight Magic Sparklers",
+    "category": "Sparklers crackers",
+    "image": "img60",
+    "price": 3.99
+  }
+
+
+  ]
+}

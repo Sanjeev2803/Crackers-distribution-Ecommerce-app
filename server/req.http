@@ -1,0 +1,16 @@
+post http://localhost:4000/user-api/sellers
+Content-Type: application/json
+
+{
+  "Company": "Flipkart",
+  "Country": "India",
+  "CountryCode": "91",
+  "FirstName": "rajesh",
+  "Gender": "male",
+  "LastName": "k",
+  "Mobile": "9014958056",
+  "check": true,
+  "email": "rajesh@gmail.com",
+  "password": "$2a$05$AG3h2DPCvYEBQVglRxTm8OZDz7jWuFt/msU1JSlZOwyr87oxhDOCi",
+  "state": "Andhra"
+}
