@@ -3,9 +3,9 @@ require('dotenv').config();
 const multer=require('multer')
 require('dotenv').config()
 const fs=require('fs')
-
-if(!fs.existsSync('./uploads')){
-    fs.mkdirSync('./uploads')
+const tmpDir = '/tmp';
+if(!fs.existsSync('tmpDir')){
+    fs.mkdirSync('tmpDir')
 }
 cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -14,7 +14,7 @@ cloudinary.config({
 })
 const storage=multer.diskStorage({
     destination:function(req,file,cb){
-        cb(null,'./uploads')
+        cb(null,'/tmp/./uploads')
     },
     filename:function(req,file,cb){
         const uniqueIdentifier = Date.now() + '_' + file.originalname;
