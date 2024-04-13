@@ -33,7 +33,7 @@ formdata.append('pic',file)
 console.log(formdata)
 try {
   if(isUser){
-    Users = await axios.post('http://localhost:4000/user-api/Register', formdata, {
+    Users = await axios.post('https://crackers-distribution-ecommerce-m5mbl03s8.vercel.app/user-api/Register', formdata, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
@@ -41,7 +41,7 @@ try {
 
   }else{
    
-    Users = await axios.post('http://localhost:4000/user-api/sellers', formdata, {
+    Users = await axios.post('https://crackers-distribution-ecommerce-m5mbl03s8.vercel.app/user-api/sellers', formdata, {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
