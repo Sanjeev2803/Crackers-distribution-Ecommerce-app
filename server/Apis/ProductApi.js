@@ -5,10 +5,14 @@ const asynchandler=require('express-async-handler')
 const { Addproducts, editProducts,urlNochangeEdit,deleteProducts} = require('../Controllers/ProductController')
 const cors=require('cors')
 Productapp.use(cors(
-    {
+    
         // 'Access-Control-Allow-Origin':'*'
-        origin: 'http://localhost:3000'
-    }
+        {
+            origin:["https://crackers-distribution-ecommerce-9or44nme6.vercel.app"],
+            methods:["POST","GET","PUT","DELETE"],
+            credentials:true
+          }
+    
 ))
 
 Productapp.post('/products',upload.single('pic'),asynchandler(Addproducts))
