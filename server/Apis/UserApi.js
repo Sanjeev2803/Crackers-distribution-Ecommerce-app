@@ -9,7 +9,7 @@ const verifytoken = require('../MiddleWare/VerifyToken')
 const Userapp=express.Router()
 Userapp.use(cors(
     {
-        origin:["https://crackers-distribution-ecommerce-h6tyxzvhn.vercel.app"],
+        origin:["https://crackers-distribution-ecommerce-bd57z4uha.vercel.app"],
         methods:["POST","GET","PUT","DELETE"],
         credentials:true
       }
