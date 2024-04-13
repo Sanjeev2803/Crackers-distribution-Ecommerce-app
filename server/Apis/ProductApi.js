@@ -7,11 +7,7 @@ const cors=require('cors')
 Productapp.use(cors(
     
         // 'Access-Control-Allow-Origin':'*'
-        {
-            origin:["https://crackers-distribution-ecommerce-9or44nme6.vercel.app"],
-            methods:["POST","GET","PUT","DELETE"],
-            credentials:true
-          }
+       
     
 ))
 

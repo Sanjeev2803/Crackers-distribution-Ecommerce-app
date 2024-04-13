@@ -6,9 +6,8 @@ const path=require('path')
 const app=express()
 app.use(cors(
   {
-    origin:["https://crackers-distribution-ecommerce-9or44nme6.vercel.app"],
-    methods:["POST","GET","PUT","DELETE"],
-    credentials:true
+    'Access-Control-Allow-Origin':'*'
+
   }
 ));
 app.use(express.json())
