@@ -22,12 +22,12 @@ const cors = require('cors');
 const path=require('path')
 const app=express()
 app.use(allowCors)
-app.use(cors(
-  {
-    'Access-Control-Allow-Origin':'*'
+// app.use(cors(
+//   {
+//     'Access-Control-Allow-Origin':'*'
 
-  }
-));
+//   }
+// ));
 
 app.use(express.json())
 require('dotenv').config()
