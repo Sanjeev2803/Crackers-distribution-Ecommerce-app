@@ -6,7 +6,11 @@ const Productapp = require('./Apis/ProductApi')
 const cors = require('cors');
 const path=require('path')
 const app=express()
-app.use(cors({'Access-Control-Allow-Origin':'*'}
+app.use(cors({
+origin:["https://crackers-distribution-ecommerce-h6tyxzvhn.vercel.app"],
+methods:["POST","GET","PUT","DELETE"],
+credentials:true
+}
   ))
 // app.use(cors(
 //   {
