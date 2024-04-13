@@ -14,7 +14,7 @@ cloudinary.config({
 })
 const storage=multer.diskStorage({
     destination:function(req,file,cb){
-        cb(null,'/tmp/./uploads')
+        cb(null,'tmpDir')
     },
     filename:function(req,file,cb){
         const uniqueIdentifier = Date.now() + '_' + file.originalname;
