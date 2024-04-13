@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1aadb7ac.css",
+    "main.js": "/static/js/main.46dadb6f.js",
+    "static/js/787.8ff80567.chunk.js": "/static/js/787.8ff80567.chunk.js",
+    "static/media/Diwali3.jpg": "/static/media/Diwali3.91d162b071df3711fe93.jpg",
+    "static/media/Diwali2.jpg": "/static/media/Diwali2.6a5e7d09cb51d7409d7f.jpg",
+    "static/media/Diwali1.jpg": "/static/media/Diwali1.32892d6c02d9fbf755c4.jpg",
+    "static/media/loginbg.jpg": "/static/media/loginbg.051d620d3ea56bf1756e.jpg",
+    "static/media/BannerAd.png": "/static/media/BannerAd.a5a4f1ee4513d359deb7.png",
+    "static/media/viewProducts.jpg": "/static/media/viewProducts.3d3e2cdb584c37c99173.jpg",
+    "static/media/Addproduct.jpg": "/static/media/Addproduct.dc7f8fdb89b5e6cafa52.jpg",
+    "static/media/exclusivedeals.png": "/static/media/exclusivedeals.350fddbb355d6edb8bb1.png",
+    "static/media/logo.png": "/static/media/logo.b6a1c2c882b8572ecdf3.png",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "/index.html",
+    "main.1aadb7ac.css.map": "/static/css/main.1aadb7ac.css.map",
+    "main.46dadb6f.js.map": "/static/js/main.46dadb6f.js.map",
+    "787.8ff80567.chunk.js.map": "/static/js/787.8ff80567.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1aadb7ac.css",
+    "static/js/main.46dadb6f.js"
+  ]
+}
