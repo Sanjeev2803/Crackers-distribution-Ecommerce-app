@@ -7,13 +7,13 @@ const { RegisterUser, loginUser, RegisterSeller, loginSeller, getallProducts, up
 const verifytoken = require('../MiddleWare/VerifyToken')
 
 const Userapp=express.Router()
-<<<<<<< HEAD
+
 Userapp.use(cors(
     
 ))
-=======
+
 Userapp.use(cors())
->>>>>>> d97cc65b166b054d88a6ce08b0d44c9018aabbfe
+
 Userapp.post('/payment',handlePayment)
 Userapp.post('/Register',upload.single('pic'), asyncHandler(RegisterUser))
 Userapp.post('/login',asyncHandler(loginUser))
