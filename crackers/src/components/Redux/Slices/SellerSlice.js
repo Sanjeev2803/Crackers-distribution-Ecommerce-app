@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const sellerCycle = createAsyncThunk('seller-async-calls', async (formData, thunkApi) => {
     try {
-        const res = await axios.post('https://crackers-distribution-ecommerce-m5mbl03s8.vercel.app/product-api/editproducts', formData, {
+        const res = await axios.post('https://crackers-distribution-ecommerce-pgnljzoow.vercel.app/product-api/editproducts', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
@@ -19,7 +19,7 @@ export const deleteProduct = createAsyncThunk(
     'sellerSlice/deleteProduct',
     async (product, thunkAPI) => {
         try {
-            const res = await axios.delete('https://crackers-distribution-ecommerce-m5mbl03s8.vercel.app/product-api/deleteproducts', {
+            const res = await axios.delete('https://crackers-distribution-ecommerce-pgnljzoow.vercel.app/product-api/deleteproducts', {
                 data: product // Pass product as data
             });
             console.log(res.data);

@@ -8,11 +8,7 @@ const verifytoken = require('../MiddleWare/VerifyToken')
 
 const Userapp=express.Router()
 Userapp.use(cors(
-    {
-        origin:["https://crackers-distribution-ecommerce-9or44nme6.vercel.app"],
-        methods:["POST","GET","PUT","DELETE"],
-        credentials:true
-      }
+    
 ))
 Userapp.post('/payment',handlePayment)
 Userapp.post('/Register',upload.single('pic'), asyncHandler(RegisterUser))
