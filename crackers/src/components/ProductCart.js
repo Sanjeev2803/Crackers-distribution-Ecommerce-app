@@ -51,7 +51,7 @@ const [unsavedChanges, setUnsavedChanges] = useState(false);
     const amount = (totalBill() + 25) * 100;
     const currency = "INR";
     const order = { amount: amount, currency: currency };
-    const res = await axios.post('https://crackers-distribution-ecommerce-m5mbl03s8.vercel.app/user-api/payment', order);
+    const res = await axios.post('https://www.crackers-distribution-ecommerce-9xccotwk0.vercel.app/user-api/payment', order);
     const orderData = res.data.order;
     console.log(orderData);
   
@@ -67,7 +67,7 @@ const [unsavedChanges, setUnsavedChanges] = useState(false);
       handler:async function(response){
         const body={FirstName:currentUserFirstName,...response}
         console.log(response)
-        const validate= await axios.post('https://crackers-distribution-ecommerce-m5mbl03s8.vercel.app/user-api/orderValidate',body)
+        const validate= await axios.post('https://www.crackers-distribution-ecommerce-9xccotwk0.vercel.app/user-api/orderValidate',body)
         console.log(validate.data)
         window.alert(`${validate.data.msg}`)
 setorderDetails({
@@ -127,7 +127,7 @@ setorderDetails({
     if (confirmChanges) {
       try {
         // Send a POST request to the backend to update the quantity
-        const response = await axios.put('https://crackers-distribution-ecommerce-m5mbl03s8.vercel.app/user-api/afterChangeCartQuantity', { cartItems: localCartItems,FirstName:currentUserFirstName });
+        const response = await axios.put('https://www.crackers-distribution-ecommerce-9xccotwk0.vercel.app/user-api/afterChangeCartQuantity', { cartItems: localCartItems,FirstName:currentUserFirstName });
         // Handle success response
         console.log('Quantity updated successfully:', response.data);
         setUnsavedChanges(false);

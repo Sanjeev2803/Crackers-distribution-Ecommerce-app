@@ -21,7 +21,7 @@ function Addproducts() {
       formdata.append('pic', file);
     
       try {
-        let res = await axios.post('https://crackers-distribution-ecommerce-m5mbl03s8.vercel.app/product-api/products', formdata, {
+        let res = await axios.post('https://www.crackers-distribution-ecommerce-9xccotwk0.vercel.app/product-api/products', formdata, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },

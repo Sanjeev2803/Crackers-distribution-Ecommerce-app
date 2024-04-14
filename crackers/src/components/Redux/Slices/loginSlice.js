@@ -10,7 +10,7 @@ export const UserLoginLifecycle=createAsyncThunk('user-login',async(userObj,thun
         //     let res=await axios.get('http://localhost:8000/user-api/users',userCredObj)
         // }
         if(role==='User'){
-        let res = await axios.post('https://crackers-distribution-ecommerce-m5mbl03s8.vercel.app/user-api/login', userObj)
+        let res = await axios.post('https://www.crackers-distribution-ecommerce-9xccotwk0.vercel.app/user-api/login', userObj)
        console.log(res.data)
         //save storage in local/session storage
         if(res.data.message === "login successful"){
@@ -24,7 +24,7 @@ export const UserLoginLifecycle=createAsyncThunk('user-login',async(userObj,thun
     }
     if(role==='Seller'){
        
-            let res = await axios.post('https://crackers-distribution-ecommerce-m5mbl03s8.vercel.app/user-api/sellerlogin', userObj)
+            let res = await axios.post('https://www.crackers-distribution-ecommerce-9xccotwk0.vercel.app/user-api/sellerlogin', userObj)
            console.log(res.data)
             //save storage in local/session storage
             if(res.data.message === "login successful"){
@@ -37,7 +37,7 @@ export const UserLoginLifecycle=createAsyncThunk('user-login',async(userObj,thun
             return res.data; //this will be returned to the reducers, extra reducer
         }
         if(role==='Admin'){
-            let res = await axios.post('https://crackers-distribution-ecommerce-m5mbl03s8.vercel.app/user-api/adminlogin', userObj)
+            let res = await axios.post('https://www.crackers-distribution-ecommerce-9xccotwk0.vercel.app/user-api/adminlogin', userObj)
             console.log(res.data)
              //save storage in local/session storage
              if(res.data.message === "login successful"){
