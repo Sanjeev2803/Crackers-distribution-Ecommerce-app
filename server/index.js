@@ -8,7 +8,7 @@ const allowCors = require('./allowCors');
 const path=require('path')
 const app=express()
 app.use(cors({
-origin:[["https://crackers-distribution-ecommerce-app.vercel.app"],
+origin:["https://crackers-distribution-ecommerce-app.vercel.app"],
 
 methods:["POST","GET","PUT","DELETE"],
 credentials:true
