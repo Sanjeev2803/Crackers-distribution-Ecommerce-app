@@ -24,7 +24,7 @@ console.log(oldproductdata)
       formdata.append('sellerEditObj', circularJson.stringify(sellerspecificProduct)); // Convert to JSON string
       formdata.append('pic', file);
       try {
-        let res = await axios.post('https://www.crackers-distribution-ecommerce-9xccotwk0.vercel.app/product-api/sellerEdit', formdata, {
+        let res = await axios.post('https://crackers-distribution-ecommerce-9xccotwk0.vercel.app/product-api/sellerEdit', formdata, {
           headers: {
             'Content-Type': 'multipart/form-data',
           },
@@ -37,7 +37,7 @@ console.log(oldproductdata)
       try {
         delete newProduct.productName;
         const sellerspecificProduct = { ...newProduct, Firstname: currentSeller.FirstName, ProductName: oldproductdata.title }
-        let res = await axios.post('https://www.crackers-distribution-ecommerce-9xccotwk0.vercel.app/product-api/urlNochangeEdit', sellerspecificProduct);
+        let res = await axios.post('https://crackers-distribution-ecommerce-9xccotwk0.vercel.app/product-api/urlNochangeEdit', sellerspecificProduct);
         console.log(res.data);
       } catch (error) {
         console.log(error.message);

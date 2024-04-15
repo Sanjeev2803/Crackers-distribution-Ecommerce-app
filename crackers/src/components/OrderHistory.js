@@ -54,7 +54,7 @@ Navigate('/login')
                                 <h5>{currentUser.Orders[currentUser.Orders.length-1].orderId}</h5>
                                 <ul>
                                     <li className="active">
-                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                                        <svg xmlns="http://w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
                                             viewBox="0 0 512 512" width="50" height="50">
                                             <title> Clock Delivery package </title>
                                             <path
@@ -90,7 +90,7 @@ Navigate('/login')
                                         <p>Pending</p>
                                     </li>
                                     <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                                        <svg xmlns="http://w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
                                             viewBox="0 0 512 512" width="50" height="50">
                                             <title> Clock Delivery package </title>
                                             <path
@@ -127,7 +127,7 @@ Navigate('/login')
                                     </li>
 
                                     <li>
-                                        <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
+                                        <svg xmlns="http://w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
                                             viewBox="0 0 512 512" width="50" height="50">
                                             <title> Clock Delivery package </title>
                                             <path

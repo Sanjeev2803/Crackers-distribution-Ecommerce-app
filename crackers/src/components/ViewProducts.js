@@ -166,7 +166,7 @@ const handleCategory=(category)=>{
     const fetchData = async () => {
       try {
         if (userType === 'User') {
-          const response = await axios.get('https://www.crackers-distribution-ecommerce-9xccotwk0.vercel.app/user-api/userProducts');
+          const response = await axios.get('https://crackers-distribution-ecommerce-9xccotwk0.vercel.app/user-api/userProducts');
           const productData = response.data.payload;
 console.log(productData)
           const finalProduct = productData.map((product) => {
