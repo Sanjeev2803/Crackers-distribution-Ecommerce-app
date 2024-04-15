@@ -15,9 +15,9 @@ const app=express()
 //   ))
 
 app.use(cors({
-    origin: 'https://crackers-distribution-ecommerce-1114hyotc.vercel.app',
-    methods: ['GET', 'POST','PUT','DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+  origin: 'https://crackers-distribution-ecommerce-9xccotwk0.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 // app.use(function (req, res, next) {
 //     // Enabling CORS
