@@ -7,14 +7,18 @@ const cors = require('cors');
 const allowCors = require('./allowCors');
 const path=require('path')
 const app=express()
-// app.use(cors({
-// origin:["https://crackers-distribution-ecommerce-bd57z4uha.vercel.app"],
+app.use(cors({
+origin:[["https://crackers-distribution-ecommerce-app.vercel.app"],
 
-// methods:["POST","GET","PUT","DELETE"],
-// credentials:true
-// }
-//   ))
-app.use(allowCors);
+methods:["POST","GET","PUT","DELETE"],
+credentials:true
+}
+  ))
+// app.use(allowCors);
+// app.use(cors({
+// origin:["https://crackers-distribution-ecommerce-app.vercel.app"],
+
+// }))
 // app.use(cors({
 //   origin: 'https://crackers-distribution-ecommerce-9xccotwk0.vercel.app',
 //   methods: ['GET', 'POST', 'PUT', 'DELETE'],
