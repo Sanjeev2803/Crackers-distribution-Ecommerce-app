@@ -13,6 +13,12 @@ const app=express()
 // credentials:true
 // }
 //   ))
+
+app.use(cors({
+    origin: 'https://crackers-distribution-ecommerce-1114hyotc.vercel.app',
+    methods: ['GET', 'POST','PUT','DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization']
+}));
 app.use(function (req, res, next) {
     // Enabling CORS
     res.header("Access-Control-Allow-Origin", "*");
