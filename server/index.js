@@ -4,6 +4,7 @@ const express=require('express')
 const Userapp=require('./Apis/UserApi')
 const Productapp = require('./Apis/ProductApi')
 const cors = require('cors');
+const allowCors = require('./allowCors');
 const path=require('path')
 const app=express()
 // app.use(cors({
@@ -13,12 +14,12 @@ const app=express()
 // credentials:true
 // }
 //   ))
-
-app.use(cors({
-  origin: 'https://crackers-distribution-ecommerce-9xccotwk0.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  allowedHeaders: ['Content-Type', 'Authorization']
-}));
+app.use(allowCors);
+// app.use(cors({
+//   origin: 'https://crackers-distribution-ecommerce-9xccotwk0.vercel.app',
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   allowedHeaders: ['Content-Type', 'Authorization']
+// }));
 // app.use(function (req, res, next) {
 //     // Enabling CORS
 //     res.header("Access-Control-Allow-Origin", "*");
