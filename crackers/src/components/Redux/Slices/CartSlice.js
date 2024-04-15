@@ -6,7 +6,7 @@ export const fetchCartItems = createAsyncThunk(
   'cart/fetchCartItems',
   async (product, thunkAPI) => {
     try {
-      const response = await axios.put(`https://crackers-distribution-ecommerce-9xccotwk0.vercel.app/user-api/users`,product);
+      const response = await axios.put(`https://crackers-distribution-ecommerce-app.vercel.app/user-api/users`,product);
       return response.data.cart;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
@@ -19,7 +19,7 @@ export const removeCartItem = createAsyncThunk(
   'cart/removeCartItem',
   async (items, thunkAPI) => {
     try {
-      const res=await axios.delete(`https://crackers-distribution-ecommerce-9xccotwk0.vercel.app/user-api/cart`,{ data: items });
+      const res=await axios.delete(`https://crackers-distribution-ecommerce-app.vercel.app/user-api/cart`,{ data: items });
       return res.data.cart;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
