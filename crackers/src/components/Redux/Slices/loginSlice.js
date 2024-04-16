@@ -26,7 +26,7 @@ export const UserLoginLifecycle=createAsyncThunk('user-login',async(userObj,thun
        
             let res = await axios.post('https://crackers-distribution-ecommerce-app.vercel.app/user-api/sellerlogin', userObj)
            console.log(res.data)
-            //save storage in local/session storage
+            //save storage in local
             if(res.data.message === "login successful"){
                 localStorage.setItem('token', res.data.payload.token)
             }

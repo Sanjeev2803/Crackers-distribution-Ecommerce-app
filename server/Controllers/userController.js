@@ -129,7 +129,7 @@ else{
     const validPass=await bcryptjs.compare(userData.password,userSearch.password)
     if(validPass){
       userData.password=userSearch.password
-      const jwt = jwt.sign({ userData }, process.env.JWT_SECRET_KEY, { expiresIn: '2h' });
+      const jwt = jsontoken.sign({ userData }, process.env.JWT_SECRET_KEY, { expiresIn: '2h' });
       res.status(201).send({'message':'login successful',payload:{userSearch,token:jwt}})
     }
     else{
