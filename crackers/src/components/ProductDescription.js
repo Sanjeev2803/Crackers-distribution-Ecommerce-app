@@ -53,9 +53,11 @@ setqty(e.target.value)
 }
 const addCart=(product)=>{
   console.log(product)
-  setTimeout(() => {
-    toast.success('item added !!')
-  }, 1000);
+
+  toast.success('Item added !!', {
+    duration: 2000 // Duration in milliseconds
+  });
+  
   
   const currentUserId=currentUser.userId
   

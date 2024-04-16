@@ -4,6 +4,7 @@ import {useForm} from 'react-hook-form'
 import { Link, Navigate, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { hashSync } from 'bcryptjs'
+import { Toaster, toast } from 'sonner'
 
 function Register() {
     const {register,handleSubmit,reset,formState:{errors}}=useForm()
@@ -38,6 +39,19 @@ try {
         'Content-Type': 'multipart/form-data',
       },
     });
+    
+    toast.promise(Users, {
+      loading: 'Saving data...',
+      success: () => {
+        // Success callback function
+        return 'Registration Successful!';
+      },
+      error: () => {
+        // Error callback function
+        return 'Failed to Register';
+      },
+      duration: 3000
+    });
 
   }else{
    
@@ -45,6 +59,18 @@ try {
       headers: {
         'Content-Type': 'multipart/form-data',
       },
+    });
+    toast.promise(Users, {
+      loading: 'Saving data...',
+      success: () => {
+        // Success callback function
+        return 'Registration Successful!';
+      },
+      error: () => {
+        // Error callback function
+        return 'Failed to Register';
+      },
+      duration: 3000
     });
 
   }
@@ -662,6 +688,7 @@ setfile(e.target.files[0])
   </form>
   <p className='d-flex justify-content-center mt-1'><Link to='/login' style={{textDecoration:'none'}}>Already Registered? Sign In</Link></p>
 </div>
+<Toaster richColors />
 </div>
     
 

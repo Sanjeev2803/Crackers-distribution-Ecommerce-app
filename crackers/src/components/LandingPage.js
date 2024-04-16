@@ -9,7 +9,7 @@ import bgImg2 from '../Images/Diwali2.jpg'
 import bgImg3 from '../Images/Diwali3.jpg'
 import { useSelector } from 'react-redux';
 import { MdDelete } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal'; // Import modal component from React Bootstrap
 import Banner from '../Images/BannerAd.png';
 import { IoMdCloseCircle } from "react-icons/io";
@@ -89,11 +89,22 @@ export const ProductCard = ({ imgSrc, title, description, price, newprice, categ
 
 
 function LandingPage() {
+  const navigate=useNavigate()
   const [showModal, setShowModal] = useState(false);
   const handleCloseModal = () => {
     setShowModal(false);
   };
-
+  const popupModal=()=>{
+    setShowModal(false)
+  }
+const handleProductCardClick=()=>{
+ if(!loginStatus){
+  setShowModal(true)
+ }
+ else{
+  navigate('/login')
+ }
+}
   useEffect(() => {
     setShowModal(true); // Show modal by default when component mounts
   }, []);
@@ -147,6 +158,7 @@ function LandingPage() {
               price="125"
               newprice='8'
               category='flower Pots'
+              onClick={handleProductCardClick}
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2023/06/Crackling-SOda.jpg"
@@ -155,6 +167,7 @@ function LandingPage() {
               price="125"
               newprice='8'
               category='sparkles'
+              onClick={handleProductCardClick}
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Flower-Bomb-II.jpg"
@@ -163,6 +176,7 @@ function LandingPage() {
               price="125"
               newprice='8'
               category='Aerial Crackers'
+              onClick={handleProductCardClick}
             />
              <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Flower-Bomb-II.jpg"
@@ -171,6 +185,7 @@ function LandingPage() {
               price="125"
               newprice='8'
               category='sparkles'
+              onClick={handleProductCardClick}
             />
                  <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Flower-Bomb-II.jpg"
@@ -179,6 +194,7 @@ function LandingPage() {
               price="125"
               newprice='8'
               category='sparkles'
+              onClick={handleProductCardClick}
             />
                  <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Flower-Bomb-II.jpg"
@@ -186,6 +202,7 @@ function LandingPage() {
            price='60'
               newprice='8'
               category='flower pots'
+              onClick={handleProductCardClick}
             />
 
           
@@ -209,7 +226,18 @@ function LandingPage() {
     </button>
   </Modal.Body>
 </Modal>
-
+{loginStatus === false && (
+  <Modal show={showModal} onHide={handleCloseModal} centered size='lg'>
+    <Modal.Body style={{ maxHeight: '80vh', overflowY: 'auto', padding: 0 }}>
+      {/* Content of your modal */}
+      You must be logged in to get access.
+      <div className='d-flex justify-content-between'>
+        <button className='btn btn-primary' onClick={() => navigate('/login')}>Yes</button>
+        <button className='btn btn-primary'  onClick={() => popupModal()}>No</button>
+      </div>
+    </Modal.Body>
+  </Modal>
+)}
 
       <section className="text-center py-5" id="gallery">
         {/* <img src={dealImg} className="img-fluid mb-2" alt="" /> */}
@@ -221,6 +249,7 @@ function LandingPage() {
              category='sparkles'
               price="12.5"
               newprice='8'
+              onClick={handleProductCardClick}
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Magic-Buzz-300x300.jpg"
@@ -228,6 +257,7 @@ function LandingPage() {
              category='flower pots'
               price="9"
               newprice='7'
+              onClick={handleProductCardClick}
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Ganga-jamuna.jpg"
@@ -235,6 +265,7 @@ function LandingPage() {
              category='deluxe crackers'
               price="6"
               newprice='4'
+              onClick={handleProductCardClick}
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/1000-Wala-300x300.jpg"
@@ -242,6 +273,7 @@ function LandingPage() {
               category='flower pots'
               price="5"
               newprice='3.5'
+              onClick={handleProductCardClick}
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/5000-Wala-300x300.jpg"
@@ -249,6 +281,7 @@ function LandingPage() {
              category='flower pots'
               price="7.5"
               newprice="5"
+              onClick={handleProductCardClick}
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Silver-gift-box-from-ajanta-300x300.jpg"
@@ -256,6 +289,7 @@ function LandingPage() {
              category='sparkles'
               price="8"
               newprice='6'
+              onClick={handleProductCardClick}
             />
           </div>
         </div>
