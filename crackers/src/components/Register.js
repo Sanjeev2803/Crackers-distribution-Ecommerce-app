@@ -40,7 +40,7 @@ try {
       },
     });
     
-    toast.promise(Users, {
+    toast.promise(Promise.resolve(Users.data), {
       loading: 'Saving data...',
       success: () => {
         // Success callback function
@@ -60,7 +60,7 @@ try {
         'Content-Type': 'multipart/form-data',
       },
     });
-    toast.promise(Users, {
+    toast.promise(Promise.resolve(Users.data), {
       loading: 'Saving data...',
       success: () => {
         // Success callback function
