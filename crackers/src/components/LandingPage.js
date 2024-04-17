@@ -19,8 +19,23 @@ export const ProductCard = ({ imgSrc, title, description, price, newprice, categ
   const [isdeals,setisdeals]=useState(false)
   const loginStatus=useSelector((state)=>state.login.loginStatus)
   const currentuserType = useSelector((state) => state.login.userRole);
+  const [showModal, setShowModal] = useState(false);
+  const navigate=useNavigate()
    // Empty dependency array ensures the effect runs only once on mount
-
+   const popupModal=()=>{
+    setShowModal(false)
+  }
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+const handleProductCardClick=()=>{
+ if(!loginStatus){
+  setShowModal(true)
+ }
+ else{
+  navigate('/login')
+ }
+}
   const handleEditClick = () => {
     // Call the onEdit function and pass the current product object
     onEdit({ imgSrc, title, description, price, newprice, category });
@@ -32,7 +47,7 @@ export const ProductCard = ({ imgSrc, title, description, price, newprice, categ
     <>
     {currentuserType !== 'Seller' ? (
       <div className="col-12 col-sm-6 col-md-4 col-lg-4 mb-3">
-        <div className="card">
+        <div className="card" onClick={handleProductCardClick}>
           <img className="card-img img-fluid" src={imgSrc} alt="Vans" />
           <div className="card-body">
             <h4 className="card-title">{title}</h4>
@@ -44,24 +59,36 @@ export const ProductCard = ({ imgSrc, title, description, price, newprice, categ
               <span className="price-user">₹{price}</span>
               <span className="new-price-user">₹{newprice}</span>
               </div>
-              <FaShoppingBag/>
-              <FaHeart />
+              {loginStatus?<FaShoppingBag onClick={()=>{ navigate('/viewProduct')}} />:<FaShoppingBag onClick={()=>{ navigate('/login')}} />}
+              
               
               
             </div>
           </div>
         </div>
+        { loginStatus==='false'&&
+            <Modal show={showModal} onHide={handleCloseModal} centered size='lg'>
+  <Modal.Body style={{ maxHeight: '80vh', overflowY: 'auto', padding: 0 }}>
+    {/* Content of your modal */}
+    Login to get access!!
+    <div className='d-flex justify-content-between'>
+    <button className='d-flex justify-content-center btn btn-primary' onClick={()=>{navigate('/login')}}>Yes</button>
+    <button className='d-flex justify-content-center btn btn-primary' onClick={handleCloseModal}>No</button>
+    </div>
+  </Modal.Body>
+</Modal>
+}
       </div>
     ) : (
       <div className="col-12 col-sm-6 col-md-4 col-lg-4 mb-3">
-        <div className="card">
+        <div className="card" >
           <img className="card-img img-fluid" src={imgSrc} alt="Vans" />
           <div className="card-body">
             <h4 className="card-title">{title}</h4>
             <p className="price d-flex justify-content-center">₹{price}</p>
             <h6 className="card-subtitle mb-2 text-muted">Category:{category}</h6>
             <p className="card-text">{description}</p>
-
+            
             <div className="buy d-flex justify-content-between align-items-center">
              
               {isdeals&&<span className="new-price">₹{newprice}</span>}
@@ -94,17 +121,7 @@ function LandingPage() {
   const handleCloseModal = () => {
     setShowModal(false);
   };
-  const popupModal=()=>{
-    setShowModal(false)
-  }
-const handleProductCardClick=()=>{
- if(!loginStatus){
-  setShowModal(true)
- }
- else{
-  navigate('/login')
- }
-}
+  
   useEffect(() => {
     setShowModal(true); // Show modal by default when component mounts
   }, []);
@@ -158,7 +175,7 @@ const handleProductCardClick=()=>{
               price="125"
               newprice='8'
               category='flower Pots'
-              onClick={handleProductCardClick}
+             
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2023/06/Crackling-SOda.jpg"
@@ -167,7 +184,7 @@ const handleProductCardClick=()=>{
               price="125"
               newprice='8'
               category='sparkles'
-              onClick={handleProductCardClick}
+          
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Flower-Bomb-II.jpg"
@@ -176,7 +193,7 @@ const handleProductCardClick=()=>{
               price="125"
               newprice='8'
               category='Aerial Crackers'
-              onClick={handleProductCardClick}
+              
             />
              <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Flower-Bomb-II.jpg"
@@ -185,7 +202,7 @@ const handleProductCardClick=()=>{
               price="125"
               newprice='8'
               category='sparkles'
-              onClick={handleProductCardClick}
+            
             />
                  <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Flower-Bomb-II.jpg"
@@ -194,7 +211,7 @@ const handleProductCardClick=()=>{
               price="125"
               newprice='8'
               category='sparkles'
-              onClick={handleProductCardClick}
+             
             />
                  <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Flower-Bomb-II.jpg"
@@ -202,7 +219,7 @@ const handleProductCardClick=()=>{
            price='60'
               newprice='8'
               category='flower pots'
-              onClick={handleProductCardClick}
+              
             />
 
           
@@ -212,9 +229,9 @@ const handleProductCardClick=()=>{
         <h2 className="fw-bold">Most Loved Collections</h2>
 
       </section>
-      <Modal show={showModal} onHide={handleCloseModal} centered size='lg'>
+     {/* <Modal show={showModal} onHide={handleCloseModal} centered size='lg'>
   <Modal.Body style={{ maxHeight: '80vh', overflowY: 'auto', padding: 0 }}>
-    {/* Content of your modal */}
+   
     <img
       src={Banner}
       className='img-fluid'
@@ -225,19 +242,8 @@ const handleProductCardClick=()=>{
       <IoMdCloseCircle />
     </button>
   </Modal.Body>
-</Modal>
-{loginStatus === false && (
-  <Modal show={showModal} onHide={handleCloseModal} centered size='lg'>
-    <Modal.Body style={{ maxHeight: '80vh', overflowY: 'auto', padding: 0 }}>
-      {/* Content of your modal */}
-      You must be logged in to get access.
-      <div className='d-flex justify-content-between'>
-        <button className='btn btn-primary' onClick={() => navigate('/login')}>Yes</button>
-        <button className='btn btn-primary'  onClick={() => popupModal()}>No</button>
-      </div>
-    </Modal.Body>
-  </Modal>
-)}
+</Modal>  */}
+
 
       <section className="text-center py-5" id="gallery">
         {/* <img src={dealImg} className="img-fluid mb-2" alt="" /> */}
@@ -249,7 +255,7 @@ const handleProductCardClick=()=>{
              category='sparkles'
               price="12.5"
               newprice='8'
-              onClick={handleProductCardClick}
+              
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Magic-Buzz-300x300.jpg"
@@ -257,7 +263,7 @@ const handleProductCardClick=()=>{
              category='flower pots'
               price="9"
               newprice='7'
-              onClick={handleProductCardClick}
+              
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Ganga-jamuna.jpg"
@@ -265,7 +271,7 @@ const handleProductCardClick=()=>{
              category='deluxe crackers'
               price="6"
               newprice='4'
-              onClick={handleProductCardClick}
+              
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/1000-Wala-300x300.jpg"
@@ -273,7 +279,7 @@ const handleProductCardClick=()=>{
               category='flower pots'
               price="5"
               newprice='3.5'
-              onClick={handleProductCardClick}
+              
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/5000-Wala-300x300.jpg"
@@ -281,7 +287,7 @@ const handleProductCardClick=()=>{
              category='flower pots'
               price="7.5"
               newprice="5"
-              onClick={handleProductCardClick}
+              
             />
             <ProductCard
               imgSrc="https://ajantafireworks.co.in/wp-content/uploads/2021/07/Silver-gift-box-from-ajanta-300x300.jpg"
@@ -289,7 +295,7 @@ const handleProductCardClick=()=>{
              category='sparkles'
               price="8"
               newprice='6'
-              onClick={handleProductCardClick}
+              
             />
           </div>
         </div>

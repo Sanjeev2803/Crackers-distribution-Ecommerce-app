@@ -16,6 +16,7 @@ import logo from '../Images/logo.png'
 import { IoIosSettings } from "react-icons/io";
 import { FaHistory } from "react-icons/fa";
 import Contact from './Contact';
+import { clearCartItems } from './Redux/Slices/CartSlice';
 
 function MainNav() {
   const Navigate=useNavigate()
@@ -26,7 +27,8 @@ function MainNav() {
   const cartLength=useSelector((state)=>state?.cart.cartLength)
   const cartItems = useSelector((state) => state?.cart.cartItems);
   const [cartlength,setcartlength]=useState(currentUser?.Cart?.length)
-  const [showAddProductModal, setShowAddProductModal] = useState(false); // State to control modal visibility
+  const [showAddProductModal, setShowAddProductModal] = useState(false);
+   // State to control modal visibility
   const handleCloseAddProductModal = () => {
     setShowAddProductModal(false);
   };
@@ -41,6 +43,7 @@ function MainNav() {
   }, [cartLength])
   const logout=()=>{
     dispatch(clearState())
+    dispatch(clearCartItems())
   }
   return (
 //     <div>

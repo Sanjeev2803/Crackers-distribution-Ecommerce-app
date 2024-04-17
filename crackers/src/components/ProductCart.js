@@ -17,6 +17,7 @@ const CartTable = () => {
 const currentUserCart=useSelector((state)=>state.login.currentUser.Cart)
 console.log('cart intial',currentUser.Cart)
   const [localCartItems, setLocalCartItems] = useState(currentUser.Cart);
+  console.log(localCartItems)
   // console.log('intial cart login items',localCartItems)
 const [orderDetails,setorderDetails]=useState({})
 const [unsavedChanges, setUnsavedChanges] = useState(false);
