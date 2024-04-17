@@ -21,9 +21,18 @@ console.log('cart intial',currentUser.Cart)
 const [orderDetails,setorderDetails]=useState({})
 const [unsavedChanges, setUnsavedChanges] = useState(false);
   // Update localCartItems when cartItems changes
-  useEffect(() => {
+// Initialize localCartItems with the current user's cart items from Redux state or currentUser.Cart
+useEffect(() => {
+  if (cartItems.length > 0) {
     setLocalCartItems(cartItems);
-  }, [cartItems]);
+  } else if (currentUser.Cart.length > 0) {
+    setLocalCartItems(currentUser.Cart);
+  } else {
+    // If both cartItems and currentUser.Cart are empty, set localCartItems to an empty array
+    setLocalCartItems([]);
+  }
+}, [cartItems, currentUser.Cart]);
+
 
   const handleIncrease = (index) => {
     const updatedCartItems = [...localCartItems];
