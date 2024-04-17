@@ -20,18 +20,19 @@ console.log('cart intial',currentUser.Cart)
   // console.log('intial cart login items',localCartItems)
 const [orderDetails,setorderDetails]=useState({})
 const [unsavedChanges, setUnsavedChanges] = useState(false);
+const [initialized, setInitialized] = useState(false);
   // Update localCartItems when cartItems changes
 // Initialize localCartItems with the current user's cart items from Redux state or currentUser.Cart
 useEffect(() => {
-  if (cartItems.length > 0) {
-    setLocalCartItems(cartItems);
-  } else if (currentUser.Cart.length > 0) {
+  // If localCartItems has not been initialized and cartItems is empty, set localCartItems to currentUser.Cart
+  if (!initialized && cartItems.length === 0) {
     setLocalCartItems(currentUser.Cart);
+    setInitialized(true); // Set initialized to true
   } else {
-    // If both cartItems and currentUser.Cart are empty, set localCartItems to an empty array
-    setLocalCartItems([]);
+    // Set localCartItems to cartItems
+    setLocalCartItems(cartItems);
   }
-}, [cartItems, currentUser.Cart]);
+}, [cartItems, currentUser.Cart, initialized]);
 
 
   const handleIncrease = (index) => {
@@ -40,10 +41,10 @@ useEffect(() => {
     setLocalCartItems(updatedCartItems);
     setUnsavedChanges(true);
   };
-  useEffect(() => {
-    // Initialize localCartItems with the current user's cart items
-    setLocalCartItems([...currentUserCart]);
-  }, [currentUserCart]);
+  // useEffect(() => {
+  //   // Initialize localCartItems with the current user's cart items
+  //   setLocalCartItems([...currentUserCart]);
+  // }, [currentUserCart]);
   
   const handleDecrease = (index) => {
     const updatedCartItems = [...localCartItems];
