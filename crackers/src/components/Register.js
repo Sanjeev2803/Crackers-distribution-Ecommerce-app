@@ -40,18 +40,7 @@ try {
       },
     });
     
-    toast.promise(Promise.resolve(Users.data), {
-      loading: 'Saving data...',
-      success: () => {
-        // Success callback function
-        return 'Registration Successful!';
-      },
-      error: () => {
-        // Error callback function
-        return 'Failed to Register';
-      },
-      duration: 3000
-    });
+    
 
   }else{
    
@@ -60,36 +49,49 @@ try {
         'Content-Type': 'multipart/form-data',
       },
     });
-    toast.promise(Promise.resolve(Users.data), {
-      loading: 'Saving data...',
-      success: () => {
-        // Success callback function
-        return 'Registration Successful!';
-      },
-      error: () => {
-        // Error callback function
-        return 'Failed to Register';
-      },
-      duration: 3000
-    });
+   
 
   }
-  
-  
-  if(Users.status===201){
-    console.log(Users.data.payload)
-    console.log(Users.data)
-    Navigate('/Login')
-  }else {
-    let errorMessage = Users.data.message;
-    SetErr(errorMessage);
-  }
+  toast.promise(Users, {
+    loading: 'Loading...',
+    success: (data) => {
+      if (data.status === 201) {
+        console.log(data.data.payload);
+        console.log(data.data);
+        Navigate('/Login');
+        return `Register Successful!`;
+      } else {
+        let errorMessage = data.data.message;
+        SetErr(errorMessage);
+        return 'Error';
+      }
+    },
+    error: (error) => {
+      console.error(error);
+      return 'Error occurred during registration';
+    },
+  });
 } catch (error) {
   console.error(error);
   // Handle the error appropriately, e.g., SetErr('Error occurred during registration');
 }
-// reset()
-    }
+};
+  
+  
+//   if(Users.status===201){
+//     console.log(Users.data.payload)
+//     console.log(Users.data)
+//     Navigate('/Login')
+//   }else {
+//     let errorMessage = Users.data.message;
+//     SetErr(errorMessage);
+//   }
+// } catch (error) {
+//   console.error(error);
+//   // Handle the error appropriately, e.g., SetErr('Error occurred during registration');
+// }
+// // reset()
+//     }
     const handleUploadpic=(e)=>{
 console.log(e.target.files[0])
 setfile(e.target.files[0])
