@@ -47,11 +47,13 @@ Navigate('/login')
                         </div>
                     </div>
                 </div>
-                <div className="col-lg-8">
+                {currentUser.Orders?.length<=0&&<div><p className='d-flex justify-content-center fs-lead-7'>No Orders Placed!!</p></div>}
+
+                {currentUser.Orders?.length>0&&<div className="col-lg-8">
                     <div className="card">
                         <div className="card-body">
                             <div className="top-status">
-                                <h5>{currentUser.Orders[currentUser.Orders.length-1].orderId}</h5>
+                                <h5>{currentUser.Orders[currentUser?.Orders?.length-1].orderId}</h5>
                                 <ul>
                                     <li className="active">
                                         <svg xmlns="http://w3.org/2000/svg" id="Layer_1" data-name="Layer 1"
@@ -231,8 +233,11 @@ Navigate('/login')
         </div>
                         </div>
                     </div>
+                
                 </div>
+}
             </div>
+    
         </div>
     </div>
 </section>

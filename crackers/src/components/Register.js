@@ -58,8 +58,10 @@ try {
       if (data.status === 201) {
         console.log(data.data.payload);
         console.log(data.data);
-        Navigate('/Login');
-        return `Register Successful!`;
+        toast.success("Register Successful!");
+        setTimeout(() => {
+          Navigate('/Login');
+        }, 2000);
       } else {
         let errorMessage = data.data.message;
         SetErr(errorMessage);
