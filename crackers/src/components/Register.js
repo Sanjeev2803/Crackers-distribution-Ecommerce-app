@@ -52,28 +52,22 @@ try {
    
 
   }
-  toast.promise(Users, {
-    loading: 'Loading...',
-    success: (data) => {
-      if (data.status === 201) {
-        console.log(data.data.payload);
-        console.log(data.data);
+ 
+      if (Users.data.status === 201) {
+       
         toast.success("Register Successful!");
-        setTimeout(() => {
+        
           Navigate('/Login');
-        }, 2000);
+        
       } else {
-        let errorMessage = data.data.message;
+        let errorMessage = Users.data.message;
         SetErr(errorMessage);
         return 'Error';
       }
-    },
-    error: (error) => {
-      console.error(error);
-      return 'Error occurred during registration';
-    },
-  });
-} catch (error) {
+    
+    
+  }
+ catch (error) {
   console.error(error);
   // Handle the error appropriately, e.g., SetErr('Error occurred during registration');
 }
