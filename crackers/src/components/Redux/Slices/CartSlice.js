@@ -7,6 +7,7 @@ export const fetchCartItems = createAsyncThunk(
   async (product, thunkAPI) => {
     try {
       const response = await axios.put(`https://crackers-distribution-ecommerce-app.vercel.app/user-api/users`,product);
+      console.log(response.data)
       return response.data.cart;
     } catch (error) {
       return thunkAPI.rejectWithValue(error.message);
