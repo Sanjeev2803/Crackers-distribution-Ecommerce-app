@@ -40,7 +40,17 @@ try {
       },
     });
     
-    
+    if (Users.data.status === 201) {
+       
+      toast.success("Register Successful!");
+      
+        Navigate('/Login');
+      
+    } else {
+      let errorMessage = Users.data.message;
+      SetErr(errorMessage);
+      return 'Error';
+    }
 
   }else{
    
@@ -49,21 +59,21 @@ try {
         'Content-Type': 'multipart/form-data',
       },
     });
-   
+    if (Users.data.status === 201) {
+       
+      toast.success("Register Successful!");
+      
+        Navigate('/Login');
+      
+    } else {
+      let errorMessage = Users.data.message;
+      SetErr(errorMessage);
+      return 'Error';
+    }
 
   }
  
-      if (Users.data.status === 201) {
-       
-        toast.success("Register Successful!");
-        
-          Navigate('/Login');
-        
-      } else {
-        let errorMessage = Users.data.message;
-        SetErr(errorMessage);
-        return 'Error';
-      }
+     
     
     
   }

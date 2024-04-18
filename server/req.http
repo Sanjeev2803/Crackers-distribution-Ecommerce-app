@@ -14,3 +14,23 @@ Content-Type: application/json
   "password": "$2a$05$AG3h2DPCvYEBQVglRxTm8OZDz7jWuFt/msU1JSlZOwyr87oxhDOCi",
   "state": "Andhra"
 }
+###
+POST https://crackers-distribution-ecommerce-app.vercel.app/user-api/Register
+Content-Type: application/json
+
+{
+  "FirstName": "kumari",
+  "LastName": "lova",
+  "email": "dlkumari16@gmail.com",
+  "Locality": "pedawaltair vizag",
+  "Village/cityName": "",
+  "ZipCode": "",
+  "state": "Andhra",
+  "Country": "India",
+  "DOB": "1983-07-23",
+  "Gender": "female",
+  "CountryCode": "91",
+  "Mobile": "7893085299",
+  "password": "kumari",
+  "check": true
+}
